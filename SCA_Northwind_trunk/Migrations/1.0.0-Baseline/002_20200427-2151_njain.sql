@@ -1,9 +1,13 @@
-CREATE TABLE [dbo].[Categories]
-(
-[CategoryID] [int] NOT NULL IDENTITY(1, 1),
-[CategoryName] [nvarchar] (15) NOT NULL,
-[Description] [ntext] NULL,
-[Picture] [image] NULL,
+﻿-- <Migration ID="44dab6c9-353a-46e1-88f9-35904d120e41" />
+GO
+
+PRINT N'Altering [dbo].[Customers]'
+GO
+ALTER TABLE [dbo].[Customers] ALTER COLUMN [Address] [varchar] (100) NULL
+GO
+PRINT N'Altering [dbo].[Categories]'
+GO
+ALTER TABLE [dbo].[Categories] ADD
 [CategoryType] [nvarchar] (50) NULL,
 [MainCategory] [int] NOT NULL CONSTRAINT [DF__Categorie__MainC__75A278F5] DEFAULT ((0)),
 [testCol] [nvarchar] (10) NULL,
@@ -16,9 +20,4 @@ CREATE TABLE [dbo].[Categories]
 [testCol7] [nvarchar] (10) NULL,
 [testCol8] [nvarchar] (10) NULL,
 [testCol9] [nvarchar] (10) NULL
-)
-GO
-ALTER TABLE [dbo].[Categories] ADD CONSTRAINT [PK_Categories] PRIMARY KEY CLUSTERED  ([CategoryID])
-GO
-CREATE NONCLUSTERED INDEX [CategoryName] ON [dbo].[Categories] ([CategoryName])
 GO

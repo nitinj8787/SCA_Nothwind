@@ -4,7 +4,7 @@ CREATE TABLE [dbo].[Customers]
 [CompanyName] [nvarchar] (40) NOT NULL,
 [ContactName] [nvarchar] (30) NULL,
 [ContactTitle] [nvarchar] (30) NULL,
-[Address] [nvarchar] (60) NULL,
+[Address] [varchar] (100) NULL,
 [City] [nvarchar] (15) NULL,
 [Region] [nvarchar] (15) NULL,
 [PostalCode] [nvarchar] (10) NULL,
