@@ -12,7 +12,7 @@ pipeline   {
 	steps
     {
 	
-     dir('../Sca_Northwind_June') 
+     dir('../Sca_Northwind') 
         {
 		
 		echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
